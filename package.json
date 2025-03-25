@@ -1,0 +1,12 @@
+{
+  "name": "ic-card-reader",
+  "version": "1.0.0",
+  "description": "ONY RC-S300でICカード（学生証、Suica）を読み取るプログラム",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "pcsclite": "^1.0.0"
+  }
+}
