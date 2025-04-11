@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICカードリーダー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ICカードリーダー</h1>
+    
+    <div id="system-messages" class="system-messages"></div>
+    
+    <div id="service-restart-tip" class="service-restart-tip hidden"></div>
+    
+    <div class="status-panel">
+      <h2>リーダーステータス</h2>
+      <div class="status-indicator">
+        <div id="reader-status" class="indicator disconnected">未接続</div>
+        <div id="reader-name"></div>
+      </div>
+      <div class="button-group">
+        <button id="reinitialize-btn" class="action-button">リーダーを再初期化</button>
+        <button id="force-reinitialize-btn" class="action-button danger">強制リセット</button>
+      </div>
+    </div>
+    
+    <div class="status-panel">
+      <h2>カードステータス</h2>
+      <div class="status-indicator">
+        <div id="card-status" class="indicator disconnected">なし</div>
+      </div>
+    </div>
+    
+    <div class="card-info">
+      <h2>最後に読み取ったカード情報</h2>
+      <div id="last-card-info">
+        <p>まだカードの読み取りはありません</p>
+      </div>
+    </div>
+    
+    <div class="about-section">
+      <h3>トラブルシューティング</h3>
+      <ul>
+        <li>「リーダーを再初期化」: リーダーを検出できない場合に使用します</li>
+        <li>「強制リセット」: 再初期化が失敗する場合に使用します</li>
+        <li>それでも問題が解決しない場合は、PCのスマートカードサービスを再起動してください</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
